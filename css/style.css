@@ -1,0 +1,27 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+#termekek {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 577px) {
+    #termekek { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 769px) {
+    #termekek { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+@media (min-width: 993px) {
+    #termekek { grid-template-columns: 1fr 1fr 1fr 1fr; }
+}
+
+.kartya {
+    border: 1px solid #ccc;
+    padding: 10px;
+}

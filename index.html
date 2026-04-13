@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Webáruház</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Mini Webáruház</h1>
+
+<div id="termekek"></div>
+
+<h2>Kosár</h2>
+<ul id="kosarLista"></ul>
+<p>Végösszeg: <span id="vegosszeg">0</span> Ft</p>
+
+<h2>Új termék hozzáadása</h2>
+<input id="nev" placeholder="Név">
+<input id="ar" placeholder="Ár">
+<input id="leiras" placeholder="Leírás">
+<input id="kep" placeholder="Kép URL">
+<button onclick="ujTermek()">Hozzáadás</button>
+
+<script type="module">
+import { termekekBetoltese } from "./js/get.js";
+import { kosarba } from "./js/kosar.js";
+import { ujTermekFelvitel } from "./js/post.js";
+
+window.kosarba = kosarba;
+window.ujTermek = ujTermekFelvitel;
+
+termekekBetoltese();
+</script>
+
+</body>
+</html>
