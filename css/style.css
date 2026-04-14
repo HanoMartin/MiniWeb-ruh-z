@@ -1,12 +1,13 @@
 html, body {
   height: 100%;
+  background: #f5f7fb;
 }
 
 body {
   display: flex;
   flex-direction: column;
   background-color: beige;
-height: 1000px;
+ height: 1000px;
 }
 
 main {
@@ -20,14 +21,32 @@ main {
     border-radius: 5px;
     cursor: pointer;
 }
-.kartyak{
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.container .row{
+    padding: 5px;
+}
+
+.card{
     margin: 20px;
     color: white;
     background-color: green;
+    color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
 }
+
+#vege-osszeg {
+    display: none;
+}
+
+
+
+
 img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
