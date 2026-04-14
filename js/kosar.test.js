@@ -1,10 +1,10 @@
-import { kosarOsszeg } from "./kosar.js";
+const { KosarOsszeg } = require("./kosarOsszeg.js");
 
-test("Kosár összeg számítás", () => {
-    const tesztKosar = [
+test("Kosár végösszeg helyes kiszámítása", () => {
+    const bemenet = [
         { ar: 100, db: 2 },
         { ar: 50, db: 1 }
     ];
 
-    expect(kosarOsszeg(tesztKosar)).toBe(250);
+    expect(KosarOsszeg(bemenet)).toBe(250);
 });

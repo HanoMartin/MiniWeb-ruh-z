@@ -3,17 +3,23 @@ import { sajatTermekek } from "./post.js";
 
 export let lastProducts = [];
 
-
 const container = document.getElementById("termekek");
 
-async function loadProducts() {
+export async function loadProducts() {
+
     const res = await fetch("https://dummyjson.com/products");
     const data = await res.json();
 
-    render(data.products);
+    const allProducts = [...data.products, ...sajatTermekek];
+
+    lastProducts = allProducts;
+    window.lastProducts = lastProducts; // <-- kosar.js innen éri el
+
+    render(allProducts);
+    frissitTeljesOsszeg();
 }
 
-function render(products) {
+export function render(products) {
     container.innerHTML = "";
 
     products.forEach(p => {
@@ -22,7 +28,7 @@ function render(products) {
 
         div.innerHTML = `
         <div class="card shadow-sm h-100">
-            <img src="${p.thumbnail}" class="card-img-top">
+            <img src="${p.thumbnail || 'https://via.placeholder.com/300'}" class="card-img-top">
 
             <div class="card-body d-flex flex-column">
 
@@ -54,6 +60,7 @@ function render(products) {
                 kosarba(p.id, p.title, p.price, p.stock);
                 p.stock--;
                 render(products);
+                frissitTeljesOsszeg();
             } else {
                 alert("Elfogyott a készlet!");
             }
@@ -62,5 +69,20 @@ function render(products) {
         container.appendChild(div);
     });
 }
+
+export function osszesTermekAr() {
+    return lastProducts.reduce((sum, p) => sum + p.price, 0);
+}
+
+export function frissitTeljesOsszeg() {
+    const elem = document.getElementById("vegosszeg");
+    if (!elem) return;
+
+    elem.innerHTML = `
+        Email: <b>valami@email.com</b><br>
+        Telefon: <b>+36 30 123 4567</b>
+    `;
+}
+
 
 loadProducts();
