@@ -3,45 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
+
 <title>Mini webáruház</title>
 </head>
-<body>
-    <main>
-        <form onsubmit="return false;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center my-5">
-                        <h1>Mini webáruház</h1>
-                    </div>
-                    <div>
-                        <h3>Termék hozzáadása</h3>
-                        <!-- inputok a termék nevének, leírásának, árának és darabszámának megadásához, valamint egy gomb a hozzáadáshoz -->
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Termék neve" aria-label="Termék neve">
-                            <input type="text" class="form-control" placeholder="Termék leírása" aria-label="Termék leírása">
-                            <input type="number" class="form-control" placeholder="Termék ára" aria-label="Termék ára">
-                            <input type="number" class="form-control" placeholder="DB" aria-label="Darabszám">
-                            <button class="btn" id="hozzagomb" type="button">Hozzáadás</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Termék kártyák mintája -->        
-            </div>
-        </form>
-        <!-- Végösszeg -->
-        <footer class="text-center py-4 row">
-            <h3>Végösszeg: <span id="vege-osszeg">0ft</span></h3>
-        </footer>
-    </main>
 
+<body>
+
+<main class="container">
+
+    <h1 class="text-center my-4">Mini webáruház</h1>
+
+    <h3>Termék hozzáadása</h3>
+
+    <div class="input-group mb-4">
+        <input id="name" class="form-control" placeholder="Név">
+        <input id="desc" class="form-control" placeholder="Leírás">
+        <input id="price" type="number" class="form-control" placeholder="Ár">
+        <input id="stock" type="number" class="form-control" placeholder="DB">
+        <button id="hozzagomb" class="btn btn-primary">Hozzáadás</button>
+    </div>
+
+    <div class="row g-4" id="termekek"></div>
+
+</main>
+
+<footer class="text-center py-4">
+    <h5>Kosár összeg: <span id="vege-osszeg">0</span> $</h5>
+</footer>
 
 <script type="module" src="js/get.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script type="module" src="js/post.js"></script>
+
+<a href="cart.html" class="btn btn-dark position-fixed bottom-0 end-0 m-3">
+    Kosár 🛒
+</a>
+
 </body>
 </html>
