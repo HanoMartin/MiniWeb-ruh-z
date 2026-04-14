@@ -37,6 +37,11 @@ if (gomb) {
 
         alert("Termék hozzáadva!");
 
+        // 🔥 Konzolra kiírjuk, hogy minden lefutott
+        console.log("✔ Hozzáadás sikeresen lefutott!");
+        console.log("📦 Új termék objektum:", uj);
+        console.log("📚 Aktuális terméklista:", sajatTermekek);
+
         // mezők ürítése
         document.getElementById("name").value = "";
         document.getElementById("desc").value = "";

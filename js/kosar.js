@@ -1,8 +1,18 @@
+// ===============================
+// 1. KOSÁR ÖSSZEG FÜGGVÉNY (TESZTHEZ IS)
+// ===============================
+export function KosarOsszeg(adatok) {
+    return adatok.reduce((osszeg, t) => osszeg + t.ar * t.db, 0);
+}
+
+// ===============================
+// 2. KOSÁR ADATOK LOCALSTORAGE-BŐL
+// ===============================
 export let kosar = JSON.parse(localStorage.getItem("kosar")) || [];
 
-/* =========================
-   KOSÁRBA
-========================= */
+// ===============================
+// 3. TERMÉK HOZZÁADÁSA A KOSÁRHOZ
+// ===============================
 export function kosarba(id, nev, ar, stock) {
 
     const van = kosar.find(t => t.id === id);
@@ -20,69 +30,70 @@ export function kosarba(id, nev, ar, stock) {
     }
 
     mentes();
+    frissitVegosszeg();
+    kosarOldal();
 }
 
-/* =========================
-   MENTÉS LOCALSTORAGE-BA
-========================= */
+// ===============================
+// 4. MENTÉS LOCALSTORAGE-BE
+// ===============================
 function mentes() {
     localStorage.setItem("kosar", JSON.stringify(kosar));
 }
 
-/* =========================
-   KOSÁR MEGJELENÍTÉS
-========================= */
+// ===============================
+// 5. VÉGÖSSZEG FRISSÍTÉSE
+// ===============================
+function frissitVegosszeg() {
+    const elem = document.getElementById("vegosszeg");
+    if (!elem) return;
+
+    elem.textContent = KosarOsszeg(kosar).toFixed(2);
+}
+
+// ===============================
+// 6. KOSÁR OLDAL KIRAJZOLÁSA
+// ===============================
 function kosarOldal() {
     const lista = document.getElementById("kosarLista");
+
+    frissitVegosszeg();
+
     if (!lista) return;
 
     lista.innerHTML = "";
 
-    let osszeg = 0;
-
     kosar.forEach(t => {
-        osszeg += t.ar * t.db;
-
         lista.innerHTML += `
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 <span>${t.nev} (${t.db} db)</span>
                 <div>
-                    <b class="me-3">${t.ar * t.db} Ft</b>
+                    <b class="me-3">${t.ar * t.db} $</b>
                     <button class="btn btn-danger btn-sm torol" data-id="${t.id}">X</button>
                 </div>
             </li>
         `;
     });
 
-    const veg = document.getElementById("vegosszeg");
-    if (veg) veg.textContent = osszeg;
-
     document.querySelectorAll(".torol").forEach(btn => {
         btn.addEventListener("click", () => {
             torol(btn.dataset.id);
         });
     });
-
-    const ures = document.getElementById("ures");
-    if (ures) {
-        ures.addEventListener("click", () => {
-            kosar = [];
-            mentes();
-            kosarOldal();
-        });
-    }
 }
 
-/* =========================
-   TÖRLÉS
-========================= */
+// ===============================
+// 7. TERMÉK TÖRLÉSE A KOSÁRBÓL
+// ===============================
 function torol(id) {
     kosar = kosar.filter(t => t.id != id);
     mentes();
+    frissitVegosszeg();
     kosarOldal();
 }
 
-/* =========================
-   AUTO FUTÁS KOSÁR OLDALON
-========================= */
+// ===============================
+// 8. OLDAL BETÖLTÉSEKOR FRISSÍTÉS
+// ===============================
 kosarOldal();
+frissitVegosszeg();
