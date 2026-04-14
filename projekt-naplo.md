@@ -10,3 +10,7 @@ Mit fogok csinálni: kosár.js
 
 Zeusz(04.14.):
 Szabadságot vett ki.
+
+Sprint Retrospective (Visszatekintés)(04.14):
+Mi ment jól: Az összebeszélés, feleadatmegosztás
+Mi az, amin javítani kell a jövőben: Ne engedjük el,hogy zeusz szabadságon legyen, mert hátráltatott a munka végzésben minket és az ő feladatát is kellett elvégeznünk,
