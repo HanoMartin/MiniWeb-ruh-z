@@ -1,13 +1,7 @@
-export async function arModositas(id, ujAr) {
-    const valasz = await fetch(`https://dummyjson.com/products/${id}`, {
+export async function updatePrice(id, price) {
+    await fetch(`https://dummyjson.com/products/${id}`, {
         method: "PUT",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            price: ujAr
-        })
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ price })
     });
-
-    return await valasz.json();
 }
