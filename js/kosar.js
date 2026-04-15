@@ -1,18 +1,9 @@
-// ===============================
-// 1. KOSÁR ÖSSZEG FÜGGVÉNY (TESZTHEZ IS)
-// ===============================
 export function KosarOsszeg(adatok) {
     return adatok.reduce((osszeg, t) => osszeg + t.ar * t.db, 0);
 }
 
-// ===============================
-// 2. KOSÁR ADATOK LOCALSTORAGE-BŐL
-// ===============================
 export let kosar = JSON.parse(localStorage.getItem("kosar")) || [];
 
-// ===============================
-// 3. TERMÉK HOZZÁADÁSA A KOSÁRHOZ
-// ===============================
 export function kosarba(id, nev, ar, stock) {
 
     const van = kosar.find(t => t.id === id);
@@ -34,16 +25,10 @@ export function kosarba(id, nev, ar, stock) {
     kosarOldal();
 }
 
-// ===============================
-// 4. MENTÉS LOCALSTORAGE-BE
-// ===============================
 function mentes() {
     localStorage.setItem("kosar", JSON.stringify(kosar));
 }
 
-// ===============================
-// 5. VÉGÖSSZEG FRISSÍTÉSE
-// ===============================
 function frissitVegosszeg() {
     const elem = document.getElementById("vegosszeg");
     if (!elem) return;
@@ -51,9 +36,6 @@ function frissitVegosszeg() {
     elem.textContent = KosarOsszeg(kosar).toFixed(2);
 }
 
-// ===============================
-// 6. KOSÁR OLDAL KIRAJZOLÁSA
-// ===============================
 function kosarOldal() {
     const lista = document.getElementById("kosarLista");
 
@@ -82,9 +64,6 @@ function kosarOldal() {
     });
 }
 
-// ===============================
-// 7. TERMÉK TÖRLÉSE A KOSÁRBÓL
-// ===============================
 function torol(id) {
     kosar = kosar.filter(t => t.id != id);
     mentes();
@@ -92,8 +71,5 @@ function torol(id) {
     kosarOldal();
 }
 
-// ===============================
-// 8. OLDAL BETÖLTÉSEKOR FRISSÍTÉS
-// ===============================
 kosarOldal();
 frissitVegosszeg();
