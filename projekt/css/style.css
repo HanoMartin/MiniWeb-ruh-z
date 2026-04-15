@@ -1,6 +1,5 @@
 html, body {
-  height: 100%;
-  background: #f5f7fb;
+  background-color: #f9f9fa;
 }
 
 body {
@@ -99,21 +98,19 @@ img {
 
 /* SÖTÉT MÓD */
 .dark-mode {
-    background-color: #222 !important;
+    background-color: #222222 !important;
     color: white !important;
 }
 
 .dark-mode .card {
     background-color: #333 !important;
+    color: white !important;
 }
 
 .dark-mode #felsoMenu {
     background-color: #111 !important;
 }
 
-.dark-mode footer {
-    background-color: #111 !important;
-}
 
 /* FELSŐ MENÜ */
 #felsoMenu {
@@ -191,12 +188,6 @@ img {
     .hamburger {
         display: block;
     }
-}
-
-/* SÖTÉT MÓD – beállítások szöveg piros */
-.dark-mode .settings-content h4,
-.dark-mode .settings-content button {
-    color: #0d6efd !important;
 }
 
 .btn-group .btn {
