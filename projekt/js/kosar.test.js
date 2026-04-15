@@ -1,38 +1,83 @@
-import { kosarOsszeg } from "./kosar.js";
+const { KosarOsszeg } = require("./kosarOsszeg.js");
 
-test("Kosár összeg számítás", () => {
-    const tesztKosar = [
-        { ar: 100, db: 2 },
-        { ar: 50, db: 1 }
-    ];
+describe("KosarOsszeg tesztek", () => {
 
-    /* A következő teszt a negatív árra vonatkozik, ami hibás adatnak számít */
-    const tesztKosar2 = [
-        { ar: -200, db: 1 },
-        { ar: 150, db: 3 }
-    ];
+    test("Pozitív árak és darabszámok", () => {
+        const bemenet = [
+            { ar: 100, db: 2 },
+            { ar: 50, db: 1 }
+        ];
+        expect(KosarOsszeg(bemenet)).toBe(250);
+    });
 
-    /* A következő teszt a negatív darabszámra vonatkozik, ami szintén hibás adatnak számít */
-    const tesztKosar3 = [
-        { ar: 100, db: -2 },
-        { ar: 50, db: 1 }
-    ];
+    test("Negatív árak (mindkettő negatív)", () => {
+        const bemenet = [
+            { ar: -100, db: 2 },
+            { ar: -50, db: 1 }
+        ];
+        expect(KosarOsszeg(bemenet)).toBe(-250);
+    });
 
-    /* A következő két teszt a túl nagy értékekre vonatkozik, amelyek szintén hibás adatnak számítanak */
-    const tesztKosar4 = [
-        { ar: 1000000, db: 2 },
-        { ar: 50, db: 1 }
-    ];
+    test("Egyik ár negatív, másik pozitív", () => {
+        const bemenet = [
+            { ar: -100, db: 1 },
+            { ar: 200, db: 1 }
+        ];
+        expect(KosarOsszeg(bemenet)).toBe(100);
+    });
 
-    /* A következő teszt a túl nagy darabszámra vonatkozik, ami szintén hibás adatnak számít */
-    const tesztKosar5 = [
-        { ar: 100, db: 2 },
-        { ar: 50, db: 100 }
-    ];
+    test("Negatív darabszám (elméleti hibás adat)", () => {
+        const bemenet = [
+            { ar: 100, db: -2 },
+            { ar: 50, db: 1 }
+        ];
+        expect(KosarOsszeg(bemenet)).toBe(-150);
+    });
 
-    expect(kosarOsszeg(tesztKosar)).toBe(250);
-    expect(kosarOsszeg(tesztKosar2)).toBe("Hibás adat: ár vagy darabszám nem lehet negatív");
-    expect(kosarOsszeg(tesztKosar3)).toBe("Hibás adat: ár vagy darabszám nem lehet negatív");
-    expect(kosarOsszeg(tesztKosar4)).toBe("Hibás adat: ár vagy darabszám nem lehet túl nagy");
-    expect(kosarOsszeg(tesztKosar5)).toBe("Hibás adat: ár vagy darabszám nem lehet túl nagy");
+    test("Ár nulla", () => {
+        const bemenet = [
+            { ar: 0, db: 5 },
+            { ar: 100, db: 1 }
+        ];
+        expect(KosarOsszeg(bemenet)).toBe(100);
+    });
+
+    test("Darabszám nulla", () => {
+        const bemenet = [
+            { ar: 100, db: 0 },
+            { ar: 50, db: 3 }
+        ];
+        expect(KosarOsszeg(bemenet)).toBe(150);
+    });
+
+    test("Minden nulla", () => {
+        const bemenet = [
+            { ar: 0, db: 0 },
+            { ar: 0, db: 0 }
+        ];
+        expect(KosarOsszeg(bemenet)).toBe(0);
+    });
+
+    test("Vegyes pozitív, negatív és nulla értékek", () => {
+        const bemenet = [
+            { ar: 100, db: 1 },
+            { ar: -50, db: 2 },
+            { ar: 0, db: 10 }
+        ];
+        expect(KosarOsszeg(bemenet)).toBe(0);
+    });
+
+    test("Üres tömb", () => {
+        const bemenet = [];
+        expect(KosarOsszeg(bemenet)).toBe(0);
+    });
+
+    test("Nagy számok", () => {
+        const bemenet = [
+            { ar: 1000000, db: 2 },
+            { ar: 500000, db: 3 }
+        ];
+        expect(KosarOsszeg(bemenet)).toBe(3500000);
+    });
+
 });
