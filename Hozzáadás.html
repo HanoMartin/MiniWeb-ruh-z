@@ -12,10 +12,10 @@
 
 <body>
         <div id="felsoMenu">
-            <div class="menu-title">Mini Webshop</div>
+            <div class="menu-title">Szerkesztés</div>
 
             <div id="menuIcons">
-                <a id="szerkeszt" href="Hozzáadás.html" style="margin-right:6px;" placeholder="Szerkesztés">✏️</a>
+                <a id="szerkeszt" style="margin-right:6px;">✏️</a>
                 <a href="index.html" class="menu-item">🏠</a>
                 <a href="cart.html" class="menu-item">🛒</a>
                 <button id="settingsBtn" class="menu-item">⚙️</button>
@@ -33,7 +33,18 @@
 
         <main class="container mt-5 pt-4">
 
-            <h1 class="text-center my-4">Mini webáruház</h1>
+            <h1 class="text-center my-4">Szerkesztés</h1>
+
+            <h3>Termék hozzáadása</h3>
+
+            <div class="input-group mb-4">
+                <input id="name" class="form-control" placeholder="Név">
+                <input id="desc" class="form-control" placeholder="Leírás">
+                <input id="price" type="number" class="form-control" placeholder="Ár">
+                <input id="stock" type="number" class="form-control" placeholder="DB">
+                <button id="hozzagomb" class="btn btn-primary">Hozzáadás</button>
+            </div>
+
             <div class="row g-4" id="termekek"></div>
 
         </main>
@@ -63,7 +74,7 @@
         </div>
 
 <script type="module" src="js/post.js"></script>
-<script type="module" src="js/get.js"></script>
+<script type="module" src="js/szerkeszt.js"></script>
 
 </body>
 </html>
