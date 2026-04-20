@@ -1,4 +1,4 @@
-2026.04.13.
+2026.04.13. ( 1. hét )
 
 Daily standup: 
 - Trello tábla készítése
@@ -138,7 +138,7 @@ Szeleczki Máté fejlesztő:
 
 Csikós Dávid fejlesztő:
 - Dokumentáció:
-      Minden egyes fogalmazást és ebben a hétben írt teendőt átformáltam és a fogalmazást egy kicsit hosszabbra és részletesebbre írtam le.
+      Minden egyes fogalmazást és ebben a hétben írt teendőt átformáltam és a fogalmazást egy kicsit hosszabbra és részletesebbre írtam le. Megírtam a teszteseteket, mikor szabadságot vettem ki akkor nem tudta elvégezni ezt a feladatot.
 
 - JS:
       Átnézte és ellenőrizte, hogy van-e benne lehetséges hiba a kódsorokban.
