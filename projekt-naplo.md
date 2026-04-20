@@ -97,42 +97,57 @@ Sprint Retrospective (Visszatekintés):
 -   Mi az, amin javítani kell a jövőben:
         Ne engedjük el, hogy Dávid szabadságon legyen, mert hátráltatott a munka végzésben minket és az ő feladatát is kellett elvégeznünk.
 
-Martin(04.17.):
-Szabadságot vettünk ki.
+-------------------------------------------------------------------------------------
 
+2026.04.17.
 
-Szeleczki(04.17):
-Szabadságot vettünk ki.
+Daily standup:
+-  Szabadságot vettünk ki. 
 
+Hanó Martin Scrum Master:
+-   Szabadságot vett ki.
 
-Zeusz(04.17.):
-Szabadságot vett ki.
+Szeleczki Máté fejlesztő:
+-   Szabadságot vettünk ki.
 
-Sprint Retrospective (Visszatekintés)(04.17.):
-Szabadságot vettünk ki.
+Csikós Dávid fejlesztő:
+-   Szabadságot vett ki.
 
-2. hét terve:
-Powerpoint csinálás és Véglegesítés a html oldalon.
+Sprint Retrospective (Visszatekintés):
+-   Szabadságot vettünk ki.
 
-Martin(04.20.):
-Mit csináltam: --
-Mi akadályozott: --
-Mit fogok csinálni: --
+-------------------------------------------------------------------------------------
 
-Szeleczki(04.20):
-Mit csináltam: --
-Mi akadályozott: --
-Mit fogok csinálni:--
+2026.04.20. ( 2. hét )
 
-Zeusz(04.20.):
-Mit csináltam: --
-Mi akadályozott: --
-Mit fogok csinálni:--
+Daily standup:
+-  JS elkészítése
+-  Kódok javítása és ellenőrzése
 
+Sprint:
+-  Powerpoint elkészítése
+-  Véglegesítés a html oldalon
 
-Sprint Retrospective (Visszatekintés)(04.20.):
-Mi ment jól: Az összebeszélés, feleadatmegosztás
-Mi az, amin javítani kell a jövőben: Ne engedjük el,hogy zeusz szabadságon legyen, mert hátráltatott a munka végzésben minket és az ő feladatát is kellett elvégeznünk,
+Hanó Martin Scrum Master:
+- JS:
+      Megcsinálta és ellenőrizte a lehetséges hibákat a JS kódsorokban.
+
+Szeleczki Máté fejlesztő:
+- JS:
+      Átnézte, ellenőrizte és kijavította a lehetséges hibákat a JS kódsorokban. 
+
+Csikós Dávid fejlesztő:
+- Dokumentáció:
+      Minden egyes fogalmazást és ebben a hétben írt teendőt átformáltam és a fogalmazást egy kicsit hosszabbra és részletesebbre írtam le.
+
+- JS:
+      Átnézte és ellenőrizte, hogy van-e benne lehetséges hiba a kódsorokban.
+
+Sprint Retrospective (Visszatekintés): 
+-   Mi ment jól:
+        Az összebeszélés, feleadatmegosztás.
+-   Mi az, amin javítani kell a jövőben:
+        Ne engedjük el, hogy Dávid szabadságon legyen, mert hátráltatott a munka végzésben minket és az ő feladatát is kellett elvégeznünk.
 
 
 
