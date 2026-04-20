@@ -1,3 +1,5 @@
+
+
 Martin(04.14.):
 Mit csináltam: Az egész js-t kivéve a kosár.js-t mert azt szeleczki csinálta.
 Mi akadályozott: A akadály a kosárösszeg volt.
