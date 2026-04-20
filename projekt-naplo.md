@@ -31,3 +31,44 @@ Szabadságot vett ki.
 Sprint Retrospective (Visszatekintés)(04.15.):
 Mi ment jól: Az összebeszélés, feleadatmegosztás
 Mi az, amin javítani kell a jövőben: Ne engedjük el,hogy zeusz szabadságon legyen, mert hátráltatott a munka végzésben minket és az ő feladatát is kellett elvégeznünk,
+
+Martin(04.17.):
+Szabadságot vettünk ki.
+
+
+Szeleczki(04.17):
+Szabadságot vettünk ki.
+
+
+Zeusz(04.17.):
+Szabadságot vett ki.
+
+Sprint Retrospective (Visszatekintés)(04.17.):
+Szabadságot vettünk ki.
+
+2. hét terve:
+Powerpoint csinálás és Véglegesítés a html oldalon.
+
+Martin(04.20.):
+Mit csináltam: --
+Mi akadályozott: --
+Mit fogok csinálni: --
+
+Szeleczki(04.20):
+Mit csináltam: --
+Mi akadályozott: --
+Mit fogok csinálni:--
+
+Zeusz(04.20.):
+Mit csináltam: --
+Mi akadályozott: --
+Mit fogok csinálni:--
+
+
+Sprint Retrospective (Visszatekintés)(04.20.):
+Mi ment jól: Az összebeszélés, feleadatmegosztás
+Mi az, amin javítani kell a jövőben: Ne engedjük el,hogy zeusz szabadságon legyen, mert hátráltatott a munka végzésben minket és az ő feladatát is kellett elvégeznünk,
+
+
+
+
