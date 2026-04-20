@@ -1,5 +1,6 @@
 html, body {
   background-color: #f9f9fa;
+  height: auto;
 }
 
 body {
@@ -11,6 +12,17 @@ body {
 
 main {
   flex: 1;
+}
+
+#szerkeszt {
+    background-color: primary;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+#szerkeszt:hover {
+    cursor: pointer ;
 }
 
 #hozzagomb {
@@ -111,7 +123,9 @@ img {
     background-color: #111 !important;
 }
 
-
+.dark-mode #szerkeszt {
+    background-color: #111 !important;
+}
 /* FELSŐ MENÜ */
 #felsoMenu {
     position: fixed;
@@ -199,14 +213,6 @@ img {
 }
 
 .torles-btn {
-    background-color: #0d6efd;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.modositas-btn {
     background-color: #0d6efd;
     border: none;
     padding: 5px 10px;

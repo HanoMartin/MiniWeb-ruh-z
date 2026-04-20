@@ -51,6 +51,8 @@ export function render(products) {
 
                     <div class="btn-group">
                         <button class="btn btn-primary btn-sm kosar-btn">Kosár</button>
+                        <button class="btn btn-primary btn-sm modositas-btn" style="margin-right:6px;">✏️</button>
+                        <button class="btn btn-danger btn-sm torles-btn">🗑️</button>
                     </div>
 
                 </div>
@@ -70,6 +72,15 @@ export function render(products) {
             }
         });
 
+        // MÓDOSÍTÁS
+        div.querySelector(".modositas-btn").addEventListener("click", () => {
+            megnyitModositoMenu(p);
+        });
+
+        // TÖRLÉS
+        div.querySelector(".torles-btn").addEventListener("click", () => {
+            torolTermek(p.id);
+        });
 
         container.appendChild(div);
     });
@@ -90,6 +101,8 @@ export function megnyitModositoMenu(p) {
     document.getElementById("modNev").value = p.title;
     document.getElementById("modAr").value = p.price;
     document.getElementById("modKeszlet").value = p.stock;
+
+    document.getElementById("modositMenu").style.display = "flex";
 }
 
 document.getElementById("bezMod").onclick = () => {
