@@ -147,7 +147,7 @@ Sprint Retrospective (Visszatekintés):
 -   Mi ment jól:
         Az összebeszélés, feleadatmegosztás.
 -   Mi az, amin javítani kell a jövőben:
-        Ne engedjük el, hogy Dávid szabadságon legyen, mert hátráltatott a munka végzésben minket és az ő feladatát is kellett elvégeznünk.
+        Több kommunikáció ha valaki szabadságot vesz ki és ne egybe lenne szükség megcsinálni a feladatokat.
 
 
 
