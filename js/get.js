@@ -91,20 +91,20 @@ export function render(products) {
         // KOSÁRBA RAKÁS
         // ===============================
         div.querySelector(".kosar-btn").addEventListener("click", () => {
-            if (p.stock > 0) {
-
-                kosarba(p.id, p.title, p.price, p.stock); // 🔥 HUF ár megy át
-
-                p.stock--;
-                keszletek[p.id] = p.stock;
-                saveKeszletek(keszletek);
-
-                render(products);
-            } else {
-                alert("Elfogyott a készlet!");
+            
+            if (p.stock <= 0) {
+                alert("Nincs ebből a termékből több a készleten!");
+                return;
             }
-        });
 
+            kosarba(p.id, p.title, p.price, p.stock);
+
+            p.stock--;
+            keszletek[p.id] = p.stock;
+            saveKeszletek(keszletek);
+
+            render(products);
+        });
         container.appendChild(div);
     });
 }

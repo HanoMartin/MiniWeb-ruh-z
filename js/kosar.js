@@ -24,22 +24,17 @@ export function KosarOsszeg(adatok) {
 // ===============================
 // KOSÁRBA RAKÁS (HUF ár!)
 // ===============================
-export function kosarba(id, nev, arHUF, stock) {
+export function kosarba(id, nev, arHUF) {
 
     const van = kosar.find(t => t.id === id);
 
     if (van) {
-        if (van.db < stock) {
-            van.db++;
-        } else {
-            alert("Nincs több készleten!");
-            return;
-        }
+        van.db++;
     } else {
         kosar.push({
             id,
             nev,
-            ar: arHUF,   // 🔥 HUF ár mentése
+            ar: arHUF,   // HUF ár
             db: 1
         });
     }
