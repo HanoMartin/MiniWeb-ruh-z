@@ -138,7 +138,7 @@ Szeleczki Máté fejlesztő:
 
 Csikós Dávid fejlesztő:
 - Dokumentáció:
-      Minden egyes fogalmazást és ebben a hétben írt teendőt átformáltam és a fogalmazást egy kicsit hosszabbra és részletesebbre írtam le. Megírtam a teszteseteket, mikor szabadságot vettem ki akkor nem tudta elvégezni ezt a feladatot.
+      Minden egyes fogalmazást és ebben a hétben írt teendőt átformáltam és a fogalmazást egy kicsit hosszabbra és részletesebbre írtam le. Megírtam a teszteseteket, mikor szabadságot vettem ki, akkor nem tudta elvégezni ezt a feladatot.
 
 - JS:
       Átnézte és ellenőrizte, hogy van-e benne lehetséges hiba a kódsorokban.
@@ -148,6 +148,42 @@ Sprint Retrospective (Visszatekintés):
         Az összebeszélés, feleadatmegosztás.
 -   Mi az, amin javítani kell a jövőben:
         Több kommunikáció ha valaki szabadságot vesz ki és ne egybe lenne szükség megcsinálni a feladatokat.
+
+-------------------------------------------------------------------------------------
+
+2026.04.21.
+
+Daily standup:
+-  Javascript véglegesítése és ellenőrzése
+-  HTML véglegesítése és ellenőrzése
+-  Prezentáció elkészítése
+
+Hanó Martin Scrum Master:
+- JS:
+    Ellenőrizte és véglegesítette a kódsorokat.
+- HTML:
+    Ellenőrizte és véglegesítette a kódsorokat.
+
+Szeleczki Máté fejlesztő:
+- JS:
+    Ellenőrizte és véglegesítette a kódsorokat.
+- HTML:
+    Ellenőrizte és véglegesítette a kódsorokat.
+
+Csikós Dávid fejlesztő:
+- Prezentáció:
+    Létrehozta a Powerpointot és megírja, beilleszti a szükséges szövegeket, képeket. Átformázza a Powerpoint kinézetét és megfogalmazza a szükséges szövegeket ha kell.
+- Dokumentáció:
+    Megírja a napi teendőket.
+- JS:
+    Ellenőrizte és véglegesítette a kódsorokat.
+- HTML:
+    Ellenőrizte és véglegesítette a kódsorokat.
+  
+
+
+
+  
 
 
 
